@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indonesian Tourism</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Indonesian Tourism</h1>
+            <nav>
+                <ul>
+                    <li><a href="#culture">Kebudayaan Indonesia</a></li>
+                    <li><a href="#tourist-spots">Tempat Wisata</a></li>
+                    <li><a href="#hotels">Hotel Favorit</a></li>
+                    <li><a href="#transactions">Transaksi</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="culture">
+            <h2>Kebudayaan Indonesia</h2>
+            <div class="content">
+                <img src="img/Culture.jpeg" alt="Kebudayaan Indonesia">
+                <p>Indonesia memiliki kebudayaan yang sangat beragam dengan tradisi, seni, dan adat istiadat unik dari setiap daerah. Contohnya termasuk Batik Jawa, tari Pendet Bali, rumah adat Tongkonan Toraja, dan makanan seperti rendang dan soto.</p>
+            </div>
+        </section>
+
+        <section id="tourist-spots">
+            <h2>Tempat Wisata Terbaik di Indonesia</h2>
+            <div class="content">
+                <img src="img/Tourist.jpeg" alt="Tempat Wisata di Indonesia">
+                <p>Candi Prambanan adalah kompleks candi Hindu terbesar di Indonesia, terletak di Yogyakarta. Didirikan pada abad ke-9 oleh Rakai Pikatan dari Dinasti Sanjaya, candi ini didedikasikan untuk Trimurti, tiga dewa utama dalam agama Hindu: Brahma (pencipta), Wisnu (pemelihara), dan Siwa (penghancur). Kompleks ini terkenal dengan arsitektur megah dan ukiran yang indah yang menggambarkan kisah epik Ramayana. Candi Siwa, yang merupakan candi utama, memiliki tinggi 47 meter dan dikelilingi oleh candi-candi lebih kecil yang semuanya menunjukkan keterampilan luar biasa dari seniman pada masa itu. Candi Prambanan juga merupakan Situs Warisan Dunia UNESCO dan merupakan salah satu tujuan wisata terpenting di Indonesia.</p>
+            </div>
+        </section>
+
+        <section id="hotels">
+            <h2>Hotel Favorit</h2>
+            <div class="hotel">
+                <img src="img/hotel.jpeg" alt="Hotel Tentrem Yogyakarta">
+                <div>
+                    <h3>Hotel Tentrem Yogyakarta</h3>
+                    <p>Fasilitas: Kolam renang, spa, pusat kebugaran, restoran, bar, layanan kamar, Wi-Fi gratis, parkir gratis.</p>
+                    <p>Harga: Mulai dari Rp 1.750.000 per malam.</p>
+                    <p>Alamat: Jl. AM Sangaji No.72A, Cokrodiningratan, Jetis, Yogyakarta.</p>
+                    <p>Informasi Penting: Hotel bintang 5 dengan layanan premium, dekat dengan Malioboro dan Kraton Yogyakarta.</p>
+                </div>
+            </div>
+            <div class="hotel">
+                <img src="img/hotel2.jpeg" alt="Gallery Prawirotaman Hotel">
+                <div>
+                    <h3>Gallery Prawirotaman Hotel</h3>
+                    <p>Fasilitas: Dua kolam renang outdoor, pusat kebugaran, restoran, bar, layanan kamar, Wi-Fi gratis, parkir gratis, fasilitas bisnis.</p>
+                    <p>Harga: Mulai dari Rp 600.000 per malam.</p>
+                    <p>Alamat: Jl. Prawirotaman 2 No.839 B, Brontokusuman, Mergangsan, Yogyakarta.</p>
+                    <p>Informasi Penting: Terletak strategis dekat dengan restoran dan atraksi lokal, cocok untuk pasangan dan keluarga.</p>
+                </div>
+            </div>
+            <div class="hotel">
+                <img src="img/hotel3.jpeg" alt="Ayaartta Hotel Malioboro">
+                <div>
+                    <h3>Ayaartta Hotel Malioboro</h3>
+                    <p>Fasilitas: Kolam renang, restoran, bar, layanan kamar, Wi-Fi gratis, parkir gratis, pusat bisnis.</p>
+                    <p>Harga: Mulai dari Rp 480.000 per malam.</p>
+                    <p>Alamat: Jl. KH Ahmad Dahlan No.123, Ngampilan, Yogyakarta.</p>
+                    <p>Informasi Penting: Dekat dengan stasiun kereta dan pusat kota, menawarkan sarapan buffet harian gratis.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="transactions">
+            <h2>Transaksi</h2>
+            <form id="transactionForm">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="hotel">Pilih Hotel:</label>
+                <select id="hotel" name="hotel" onchange="showHotelImage()">
+                    <option value="" disabled selected>Pilih Hotel</option>
+                    <option value="hotel1">Hotel 1</option>
+                    <option value="hotel2">Hotel 2</option>
+                    <option value="hotel3">Hotel 3</option>
+                </select>
+                <button type="button" onclick="processTransaction()">Submit</button>
+            </form>
+            <div id="hotelImageContainer"></div>
+            <div id="transactionResult"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
